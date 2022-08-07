@@ -25,11 +25,11 @@ export default function App() {
     }, 3000);
     return () => clearTimeout(timeoutId);
   }, [current]);
-
+  console.log(current);
   return (
     //definisanje background-a na samom pocetku 
     <div className="App" style={{ background: background }}>
-     
+     {current !== null && <h1>Copied { current }</h1>}
       <div className="container">
         {colors.map((color, index) => (
           <div key={index} className="card">
